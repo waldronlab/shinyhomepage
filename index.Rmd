@@ -26,7 +26,8 @@ library(webshot)
 ```
 
 ```{r}
-okapps <- c("/srv/shiny-server//BiocHubsShiny",
+okapps <- c("/srv/shiny-server//BiocHubsShiny", 
+"/srv/shiny-server//BugSigDBEnrich",
 "/srv/shiny-server//curatedMetagenomicDataCurationShiny",
 "/srv/shiny-server//PowerCalc", "/srv/shiny-server//primers")
 ```
@@ -72,20 +73,25 @@ stopifnot(
 knitr::include_graphics(piclocs[1])
 ```
 
-# curatedMetagenomicDataCurationShiny
-
+# BugSigDBEnrich
 ```{r,out.width='100%', fig.link = applinks[2], include=TRUE}
 knitr::include_graphics(piclocs[2])
 ```
 
-# PowerCalc
+# curatedMetagenomicDataCurationShiny
 
 ```{r,out.width='100%', fig.link = applinks[3], include=TRUE}
 knitr::include_graphics(piclocs[3])
 ```
 
-# R Primers
+# PowerCalc
 
 ```{r,out.width='100%', fig.link = applinks[4], include=TRUE}
 knitr::include_graphics(piclocs[4])
+```
+
+# R Primers
+
+```{r,out.width='100%', fig.link = applinks[5], include=TRUE}
+knitr::include_graphics(piclocs[5])
 ```
