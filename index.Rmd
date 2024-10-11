@@ -21,77 +21,47 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r}
-library(webshot)
-```
-
-```{r}
-okapps <- c("/srv/shiny-server//BiocHubsShiny", 
-"/srv/shiny-server//BugSigDBEnrich",
-"/srv/shiny-server//curatedMetagenomicDataCurationShiny",
-"/srv/shiny-server//PowerCalc", "/srv/shiny-server//primers")
-```
-
-```{r}
-apppic <- function(applocation, picdir = "pictures") {
-    file.path(".", picdir, paste0(basename(applocation), ".png"))
-}
-
-shootapp <- function(applocation, picdir = "pictures") {
-    picfile <- apppic(applocation, picdir = picdir)
-    webshot::appshot(
-        applocation, file = picfile, delay = 45, vwidth = 1420, vheight = 1065
-
-    )
-}
-```
-
-```{r,eval=FALSE}
-for (app in okapps)
-    shootapp(app)
-```
-
-```{r}
-applinks <- file.path("https://shiny.sph.cuny.edu", basename(okapps))
-piclocs <- vapply(okapps, apppic, character(1L))
-```
-```{r,eval=FALSE}
-webshot(
-    applinks, piclocs, delay = 45, vwidth = 1420, vheight = 1065
+```{r, include=FALSE}
+okapps <- c(
+    "/srv/shiny-server/BiocHubsShiny",
+    "/srv/shiny-server/BugSigDBEnrich",
+    "/srv/shiny-server/curatedMetagenomicDataCurationShiny",
+    "/srv/shiny-server/PowerCalc",
+    "/srv/shiny-server/primers"
 )
-```
-
-```{r}
+applinks <- paste("https://shiny.sph.cuny.edu", basename(okapps), sep = "/")
+picfiles <- file.path("~/pictures", paste0(basename(okapps), ".png"))
 stopifnot(
-    all(file.exists(piclocs))
+    all(file.exists(picfiles))
 )
 ```
 
 # BiocHubsShiny
 
-```{r,out.width='100%', fig.link = applinks[1], include=TRUE}
-knitr::include_graphics(piclocs[1])
+```{r,out.width='100%', fig.link = applinks[1], include=TRUE, echo=FALSE}
+knitr::include_graphics(picfiles[1])
 ```
 
 # BugSigDBEnrich
-```{r,out.width='100%', fig.link = applinks[2], include=TRUE}
-knitr::include_graphics(piclocs[2])
+
+```{r,out.width='100%', fig.link = applinks[2], include=TRUE, echo=FALSE}
+knitr::include_graphics(picfiles[2])
 ```
 
 # curatedMetagenomicDataCurationShiny
 
-```{r,out.width='100%', fig.link = applinks[3], include=TRUE}
-knitr::include_graphics(piclocs[3])
+```{r,out.width='100%', fig.link = applinks[3], include=TRUE, echo=FALSE}
+knitr::include_graphics(picfiles[3])
 ```
 
 # PowerCalc
 
-```{r,out.width='100%', fig.link = applinks[4], include=TRUE}
-knitr::include_graphics(piclocs[4])
+```{r,out.width='100%', fig.link = applinks[4], include=TRUE, echo=FALSE}
+knitr::include_graphics(picfiles[4])
 ```
 
 # R Primers
 
-```{r,out.width='100%', fig.link = applinks[5], include=TRUE}
-knitr::include_graphics(piclocs[5])
+```{r,out.width='100%', fig.link = applinks[5], include=TRUE, echo=FALSE}
+knitr::include_graphics(picfiles[5])
 ```
