@@ -30,7 +30,7 @@ appNames <- c(
     "PowerCalc",
     "primers"
 )
-applinks <- paste("https://shiny.sph.cuny.edu", appNames, sep = "/")
+applinks <- paste("https://shiny.sph.cuny.edu/app", appNames, sep = "/")
 picfiles <- file.path("~/pictures", paste0(appNames, ".png"))
 stopifnot(
     all(file.exists(picfiles))
