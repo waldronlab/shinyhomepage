@@ -22,46 +22,53 @@ knitr::opts_chunk$set(
 ```
 
 ```{r, include=FALSE}
-okapps <- c(
-    "/srv/shiny-server/BiocHubsShiny",
-    "/srv/shiny-server/BugSigDBEnrich",
-    "/srv/shiny-server/curatedMetagenomicDataCurationShiny",
-    "/srv/shiny-server/PowerCalc",
-    "/srv/shiny-server/primers"
+appNames <- c(
+    "imageTCGA",
+    "BiocHubsShiny",
+    "BugSigDBEnrich",
+    "curatedMetagenomicDataCurationShiny",
+    "PowerCalc",
+    "primers"
 )
-applinks <- paste("https://shiny.sph.cuny.edu", basename(okapps), sep = "/")
-picfiles <- file.path("~/pictures", paste0(basename(okapps), ".png"))
+applinks <- paste("https://shiny.sph.cuny.edu", appNames, sep = "/")
+picfiles <- file.path("~/pictures", paste0(appNames, ".png"))
 stopifnot(
     all(file.exists(picfiles))
 )
 ```
 
-# BiocHubsShiny
+# imageTCGA
 
 ```{r,out.width='100%', fig.link = applinks[1], include=TRUE, echo=FALSE}
 knitr::include_graphics(picfiles[1])
 ```
 
-# BugSigDBEnrich
+# BiocHubsShiny
 
 ```{r,out.width='100%', fig.link = applinks[2], include=TRUE, echo=FALSE}
 knitr::include_graphics(picfiles[2])
 ```
 
-# curatedMetagenomicDataCurationShiny
+# BugSigDBEnrich
 
 ```{r,out.width='100%', fig.link = applinks[3], include=TRUE, echo=FALSE}
 knitr::include_graphics(picfiles[3])
 ```
 
-# PowerCalc
+# curatedMetagenomicDataCurationShiny
 
 ```{r,out.width='100%', fig.link = applinks[4], include=TRUE, echo=FALSE}
 knitr::include_graphics(picfiles[4])
 ```
 
-# R Primers
+# PowerCalc
 
 ```{r,out.width='100%', fig.link = applinks[5], include=TRUE, echo=FALSE}
 knitr::include_graphics(picfiles[5])
+```
+
+# R Primers
+
+```{r,out.width='100%', fig.link = applinks[6], include=TRUE, echo=FALSE}
+knitr::include_graphics(picfiles[6])
 ```
