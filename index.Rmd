@@ -24,6 +24,7 @@ knitr::opts_chunk$set(
 ```{r, include=FALSE}
 appNames <- c(
     "imageTCGA",
+    "BiocPkgDash",
     "BiocHubsShiny",
     "BugSigDBEnrich",
     "curatedMetagenomicDataCurationShiny",
@@ -31,7 +32,7 @@ appNames <- c(
     "primers"
 )
 applinks <- paste("https://shiny.sph.cuny.edu/app", appNames, sep = "/")
-picfiles <- file.path("~/pictures", paste0(appNames, ".png"))
+picfiles <- file.path("~/Pictures", "shinysnaps", paste0(appNames, ".png"))
 stopifnot(
     all(file.exists(picfiles))
 )
