@@ -1,13 +1,13 @@
 library(webshot2)
 
 okapps <- c(
-    "https://shiny.sph.cuny.edu/imageTCGA",
-    "https://shiny.sph.cuny.edu/BiocPkgDash",
-    "https://shiny.sph.cuny.edu/BiocHubsShiny",
-    "https://shiny.sph.cuny.edu/BugSigDBEnrich",
-    "https://shiny.sph.cuny.edu/curatedMetagenomicDataCurationShiny",
-    "https://shiny.sph.cuny.edu/PowerCalc",
-    "https://shiny.sph.cuny.edu/primers"
+    "https://shiny.sph.cuny.edu/app/imageTCGA",
+    "https://shiny.sph.cuny.edu/app/BiocPkgDash",
+    "https://shiny.sph.cuny.edu/app/BiocHubsShiny",
+    "https://shiny.sph.cuny.edu/app/BugSigDBEnrich",
+    "https://shiny.sph.cuny.edu/app/curatedMetagenomicDataCurationShiny",
+    "https://shiny.sph.cuny.edu/app/PowerCalc",
+    "https://shiny.sph.cuny.edu/app/primers"
 )
 
 picdir <- "~/Pictures/shinysnaps/"
