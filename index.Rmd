@@ -45,32 +45,38 @@ stopifnot(
 knitr::include_graphics(picfiles[1])
 ```
 
-# BiocHubsShiny
+# BiocPkgDash
 
 ```{r,out.width='100%', fig.link = applinks[2], include=TRUE, echo=FALSE}
 knitr::include_graphics(picfiles[2])
 ```
 
-# BugSigDBEnrich
+# BiocHubsShiny
 
 ```{r,out.width='100%', fig.link = applinks[3], include=TRUE, echo=FALSE}
 knitr::include_graphics(picfiles[3])
 ```
 
-# curatedMetagenomicDataCurationShiny
+# BugSigDBEnrich
 
 ```{r,out.width='100%', fig.link = applinks[4], include=TRUE, echo=FALSE}
 knitr::include_graphics(picfiles[4])
 ```
 
-# PowerCalc
+# curatedMetagenomicDataCurationShiny
 
 ```{r,out.width='100%', fig.link = applinks[5], include=TRUE, echo=FALSE}
 knitr::include_graphics(picfiles[5])
 ```
 
-# R Primers
+# PowerCalc
 
 ```{r,out.width='100%', fig.link = applinks[6], include=TRUE, echo=FALSE}
 knitr::include_graphics(picfiles[6])
+```
+
+# R Primers
+
+```{r,out.width='100%', fig.link = applinks[7], include=TRUE, echo=FALSE}
+knitr::include_graphics(picfiles[7])
 ```
